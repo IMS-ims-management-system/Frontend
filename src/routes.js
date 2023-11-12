@@ -48,6 +48,9 @@ const Badges = React.lazy(() => import('./views/notifications/badges/Badges'))
 const Modals = React.lazy(() => import('./views/notifications/modals/Modals'))
 const Toasts = React.lazy(() => import('./views/notifications/toasts/Toasts'))
 
+// Supply
+const Supply = React.lazy(() => import('./views/supply/supply'))
+
 const Widgets = React.lazy(() => import('./views/widgets/Widgets'))
 
 const routes = [
@@ -94,6 +97,7 @@ const routes = [
   { path: '/notifications/badges', name: 'Badges', element: Badges },
   { path: '/notifications/modals', name: 'Modals', element: Modals },
   { path: '/notifications/toasts', name: 'Toasts', element: Toasts },
+  { path: '/supply/supply', name: 'Supply', element: Supply },
   { path: '/widgets', name: 'Widgets', element: Widgets },
 ]
 
