@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import axios from 'axios' // Import Axios
+import { useNavigate } from 'react-router-dom'
 import {
   CButton,
   CCard,
@@ -41,6 +41,8 @@ const Register = () => {
   const [birth, setBirth] = useState('')
   const [address, setAddress] = useState('')
 
+  const navigator = useNavigate()
+
   const gradeOptions = [
     '학사 1년차',
     '학사 2년차',
@@ -73,6 +75,7 @@ const Register = () => {
         mode: 'cors',
       })
       if (response.ok) {
+        navigator('/dashboard')
         console.log(response.ok)
       } else {
         console.error('로그인 실패')
